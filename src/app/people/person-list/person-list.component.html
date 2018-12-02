@@ -2,19 +2,10 @@
   <div class="row">
     <div class="col-xs-12 col-md-9">
       <div class="list-group">
-        <a
-          href="#"
-          class="list-group-item list-group-item-action flex-column align-items-start"
-        >
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">
-              <app-show-person
-                *ngFor="let f of friends"
-                [friend]="f"
-              ></app-show-person>
-            </h5>
-          </div>
-        </a>
+        <app-show-person
+          *ngFor="let f of friends"
+          [friend]="f"
+        ></app-show-person>
       </div>
     </div>
     <div class="col-xs-12 col-md-3 sidebar">
