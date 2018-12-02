@@ -8,6 +8,19 @@ import { Friend } from "src/app/shared/friend.model";
 })
 export class PersonList implements OnInit {
   constructor() {}
+  displayBanner = false;
+
+  showBanner(friend: Friend) {
+    this.displayBanner = true;
+    setTimeout(() => {
+      this.displayBanner = false;
+    }, 3000);
+  }
+
+  handleLike(friend: Friend) {
+    this.showBanner(friend);
+  }
+
   friends: Friend[] = [
     {
       id: 1,
