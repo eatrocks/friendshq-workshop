@@ -8,5 +8,10 @@ import { Component, OnInit, Input } from "@angular/core";
 export class ShowPerson implements OnInit {
   constructor() {}
   @Input() friend;
+  toggleLike($event) {
+    //$event.stopPropagation(); // these should work
+    //$event.stopImmediatePropagation();
+    this.friend.fav = !this.friend.fav;
+  }
   ngOnInit() {}
 }
